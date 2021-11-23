@@ -1,0 +1,61 @@
+.name {
+    font-family: monospace, sans-serif;
+    color: #023047;
+    background-color: #ffb703;
+    padding: 15px 30px;
+    border-radius: 20px;
+    text-align: center;
+
+}
+body {
+    background-color: #023047;
+}   
+#profile-photo {
+    border-radius: 100%; 
+    background-color: #fb8500;
+    padding: 10px;  
+}
+
+
+.trybe {
+    color: #07915e;    
+    }
+
+.subtittle {
+    text-align: center;
+    color: #219ebc;
+    font-family: monospace;
+    }
+
+.lists {
+    background-color: #fb8500;
+    text-align: center;
+    padding: 10px 25px;
+    border-radius: 20px;
+    color: #023047;    
+}
+
+a {
+    text-decoration: none;
+    font-size: 120%;
+    color: #dc2f02;    
+}
+
+
+.photo-comand {
+   text-align: center;
+   float: left;
+  
+}
+.description {
+    font-family: monospace, sans-serif;
+    color: #023047;
+    background-color: #ffb703;
+    padding: 15px 30px;
+    border-radius: 20px;
+    width: 60%;
+    float: right;
+}
+.section-1 {
+    display: inline-block;
+}
