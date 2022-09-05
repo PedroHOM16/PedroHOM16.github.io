@@ -1,12 +1,14 @@
 import React from 'react';
+import Footer from '../component/Footer';
 import Header from '../component/Header';
-import '../css-files/Resume.css';
+import resume from '../images/resume.jpg'
 
 export default function Resume() {
     return (
-      <div>
+      <div className='bg-gray-900'>
         <Header />
-          <h1>RESUME</h1>
+        <img alt='resume' src={ resume }/>
+        <Footer />
       </div>
     )
 }

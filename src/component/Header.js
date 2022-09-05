@@ -1,31 +1,35 @@
-import React from 'react';
+import React, { useContext } from 'react';
 import { Link } from 'react-router-dom';
-import logo from '../images/foto-pessoal.jpeg';
+import PortContext from '../context/PortContext';
+// import logo from '../images/foto-pessoal.jpeg';
 
 export default function Header() {
-  return (
-    <nav className='bg-white border-gray-200 px-2 sm:px-4 py-2.5 rounded dark:bg-gray-800'>
-      <div className='container flex flex-wrap justify-between items-center mx-auto'>
-          <img
-            src={ logo }
-            alt="Foto pessoal"
-            className='mb-3 w-12 h-12 rounded-full shadow-lg'
-          />
-          <div className="text-xs">
-            <h3>Pedro Henrique Oliveira de Moura</h3>
-            <p>(34) 99994-2908</p>
-            <p>pedro.admoura@gmail.com</p>
-            <a href="https://github.com/PedroHOM16" className="text-blue-600 underline">Acesse meu GitHub: PedroHOM16</a>
-            <br/>
-            <a href='https://www.linkedin.com/in/pedroadmoura' className="text-blue-600 underline">Acesse meu LinkedIn: pedroadmoura</a>
-          </div>
+  const { clientName, language } = useContext(PortContext);
+
+  if (language === 'Port') {
+    return (
+      <div className='bg-slate-800 felx flex-col font-mono'>
+        <h3 className='text-center text-zinc-200 sm:text-5xl lg:text-7xl text-2xl hover:italic'>Pedro Henrique Moura</h3>
+        <p className='text-center text-md sm:text-lg md:text-3xl hover:text-sky-200 text-lime-200'>Olá {clientName}, seja muito bem vindo(a)! &#128526;</p>
         <div className='container flex flex-wrap justify-between items-center mx-auto'>
-          <Link to="/home">Home</Link>
-          <Link to="/aboutme">AboutMe</Link>
-          <Link to="/resume">Resume</Link>
-          <Link to="/projects">Projects</Link>
+          <Link className='text-zinc-50 hover:italic sm:text-xl md:text-2xl  text-sm hover:text-lime-300' to="/home">Início</Link>
+          <Link className='text-zinc-50 hover:italic sm:text-xl md:text-2xl  text-sm hover:text-lime-300' to="/aboutme">SobreMim</Link>
+          <Link className='text-zinc-50 hover:italic sm:text-xl md:text-2xl  text-sm hover:text-lime-300' to="/resume">Currículo</Link>
+          <Link className='text-zinc-50 hover:italic sm:text-xl md:text-2xl  text-sm hover:text-lime-300' to="/projects">Projetos</Link>
         </div>
       </div>
-    </nav>
+    )
+  }
+  return (
+    <div className='bg-slate-800 font-mono'>
+    <h1 className='text-center text-zinc-200 sm:text-5xl lg:text-7xl text-2xl hover:italic'>Pedro Henrique Moura</h1>
+    <p className='text-center text-md sm:text-lg md:text-3xl hover:text-sky-200 text-lime-200'>Hello {clientName}, welcome to my page! &#128526;</p>
+    <div className='container flex flex-wrap justify-between items-center mx-auto'>
+      <Link className='text-zinc-50 hover:italic sm:text-xl md:text-2xl  text-sm hover:text-lime-300' to="/home">Home</Link>
+      <Link className='text-zinc-50 hover:italic sm:text-xl md:text-2xl  text-sm hover:text-lime-300' to="/aboutme">AboutMe</Link>
+      <Link className='text-zinc-50 hover:italic sm:text-xl md:text-2xl  text-sm hover:text-lime-300' to="/resume">Resume</Link>
+      <Link className='text-zinc-50 hover:italic sm:text-xl md:text-2xl  text-sm hover:text-lime-300' to="/projects">Projects</Link>
+    </div>
+  </div>
   )
 }
