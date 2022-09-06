@@ -16,15 +16,15 @@ export default function Home() {
 
   if (language === 'Port') {
     return (
-      <div className='bg-gray-900'>
+      <div className='bg-gray-900 flex flex-col justify'>
         <Header />
         <h1 className="text-zinc-200 lg:text-4xl sm:text-3xl text-xl ml-4 mt-4 mb-4 ">Desenvolvedor Web Full-Stack:</h1>
-        <div className='flex flex-raw justify-around ml-2'>
-        <div className='w-96 mb-10'>
-          <PaintBox />
-        </div>
-          <div>
-            <Card imgArray={ stacks } string='Ferramentas de Trabalho:' />
+        <div className='container flex flex-row flex-nowrap justify-around ml-2'>
+          <div className='w-96 m-auto flex'>
+            <PaintBox />
+          </div>
+          <div className='grow-0'>
+            <Card imgArray={stacks} string='Ferramentas de Trabalho:' />
           </div>
           <div className='w-96 mb-10'>
             <Pokemon />

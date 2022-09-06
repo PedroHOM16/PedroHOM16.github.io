@@ -3,7 +3,7 @@ import { squareCreator } from '../support/geometria';
 import Mount from './Mount';
 import WaterColor from './WaterColor';
 import '../style/Default.css'
-import { GiThink } from "react-icons/gi";
+// import { GiThink } from "react-icons/gi";
 // import 'animate.css';
 
 export default class PaintBox extends Component {
@@ -42,7 +42,7 @@ export default class PaintBox extends Component {
     const { blockQuant, grade, disabled } = this.state;
     console.log('grade', grade )
     return (
-      <section className="header">
+      <section className="header w-90">
         <form className="form">
           <h3 className="text-4xl" >De 1 a 15 ...</h3>
           <h3 className="text-xl text-sky-900 hover:text-lime-900">Qual o tamanho de sua imaginação? &#127752;</h3>
