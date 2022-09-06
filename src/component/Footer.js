@@ -1,5 +1,5 @@
 import React from 'react';
-import personal from '../images/personal/perfil-3.jpeg'
+import personal from '../images/personal/perfil-1.jpeg'
 
 // fazer parte em ingles ####################################################
 export default function Footer() {

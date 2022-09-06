@@ -3,13 +3,34 @@ import Card from '../component/Card';
 import Footer from '../component/Footer';
 import Header from '../component/Header';
 // import perfil1 from '../images/personal/perfil-1.jpeg'
-import perfil2 from '../images/personal/perfil-2.jpeg'
+import perfil2 from '../images/personal/perfil-2.jpeg';
 // import perfil3 from '../images/personal/perfil-3.jpeg'
-import perfil4 from '../images/personal/perfil-4.jpeg'
-import perfil5 from '../images/personal/perfil-5.jpeg'
+import perfil4 from '../images/personal/perfil-4.jpeg';
+import perfil5 from '../images/personal/perfil-5.jpeg';
+import beatles from '../images/bands/beatles-1.jpg';
+import floyd1 from '../images/bands/pink-floyd-1.jpg';
+import floyd2 from '../images/bands/pink-floyd-2.jpg';
+import amigur from '../images/hobbies/amigurumi-1.jpg';
+import jardAnim from '../images/hobbies/jardim-animais.jpg';
+import bikeGuitar from '../images/hobbies/bike-guitarra.jpg';
+import lisa from '../images/love/lisa.jpg';
+import amora from '../images/love/amora.jpg';
+import zelda1 from '../images/games/zelda-1.jpeg'
+import zelda2 from '../images/games/zelda-2.jpeg'
+import zelda3 from '../images/games/zelda-3.jpeg'
+import stardew1 from '../images/games/stardew-1.jpeg'
+import stardew2 from '../images/games/stardew-2.jpeg'
+import stardew3 from '../images/games/stardew-3.jpeg'
+import unite1 from '../images/games/unite-1.jpeg'
+import arceus1 from '../images/games/arceus-1.jpeg'
+import arceus2 from '../images/games/arceus-2.jpeg'
 
-const photos = [perfil2, perfil4, perfil5,]
 
+const photos = [perfil2, perfil4, perfil5,];
+const bands = [beatles, floyd1, floyd2];
+const hobbies = [amigur, jardAnim, bikeGuitar];
+const love = [lisa, amora];
+const games = [zelda1, zelda2, zelda3, stardew1, stardew2, stardew3, unite1, arceus1, arceus2];
 
 export default function AboutMe() {
   return (
@@ -28,7 +49,7 @@ export default function AboutMe() {
         </div>
 
         <div className='flex flex-col sm:flex-row justify-between mr-10'>
-          <Card imgArray={photos} string='Fotos pessoais:' />
+          <Card imgArray={hobbies} string='Hobbies:' />
           <p className='text-zinc-200 w-80 mt-24 text-sm md:text-lg lg:ml-24'>
             O resultado? em 2013 abandonei o curso para ingressar em outra faculdade e seguir minha paixão: a Música!
             também na UFU. Essa não durou muito tempo, decidi que a música era somente um hobby e então voltei para a Aventura inicial,
@@ -44,11 +65,11 @@ export default function AboutMe() {
             soluções com planilhas, cumprir metas e, a melhor parte, descobri o que realmente me motiva
             em um ambiente corporativo: Resolver problemas!
           </p>
-          <Card imgArray={photos} string='Fotos pessoais:' />
+          <Card imgArray={love} string='Paixões:' />
         </div>
 
         <div className='flex flex-col sm:flex-row justify-between mr-10'>
-          <Card imgArray={photos} string='Fotos pessoais:' />
+          <Card imgArray={games} string='Games:' />
           <p className='text-zinc-200 w-80 mt-24 ml-10 text-sm md:text-lg lg:ml-24'>
             Foi em agosto de 2020 que fiz mais uma escolha. Mas agora sei exatamente onde estou indo!
             Decidi largar o melhor emprego da minha carreira até então (financeiramente falando...) e começar a
@@ -100,7 +121,7 @@ export default function AboutMe() {
               What a wonderful world
             </p>
           </div>
-          <Card imgArray={photos} string='Fotos pessoais:' />
+          <Card imgArray={bands} string='Músicas:' />
         </div>
       </div>
       <Footer />

@@ -1,0 +1,16 @@
+.box {
+    border: solid 1px black;
+    width: 20px;
+    height: 20px;
+    background-color: transparent;
+    justify-content: center;
+}
+
+.quad {
+    display: flex;
+    flex-direction: corowlumn;
+    justify-content: center;
+    background-color: white;
+    align-self: center;
+    margin-top: 5%;
+}
