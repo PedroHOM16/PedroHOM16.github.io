@@ -3,6 +3,8 @@ import { squareCreator } from '../support/geometria';
 import Mount from './Mount';
 import WaterColor from './WaterColor';
 import '../style/Default.css'
+// import '../index.css'
+// import PortContext from '../context/PortContext';
 // import { GiThink } from "react-icons/gi";
 // import 'animate.css';
 
@@ -40,13 +42,15 @@ export default class PaintBox extends Component {
   
   render() {
     const { blockQuant, grade, disabled } = this.state;
-    console.log('grade', grade )
+    const langLocalStorage = localStorage.getItem('language');
+    // const nameLocalStorage = localStorage.getItem('clientName');
+    
     return (
-      <section className="header w-90">
-        <form className="form">
-          <h3 className="text-4xl" >De 1 a 15 ...</h3>
-          <h3 className="text-xl text-sky-900 hover:text-lime-900">Qual o tamanho de sua imaginação? &#127752;</h3>
-          <div className="div-square-creator">
+      <section className="flex flex-column w-full h-full flex-wrap">
+        <form className="flex flex-col">
+          <h3 className="text-4xl" >{langLocalStorage === 'Port' ? 'De 1 a 15 ...' : 'From 1 to 15 ...'}</h3>
+          <h3 className="text-lg text-sky-900 hover:text-lime-900">&#127752;{langLocalStorage === 'Port' ? 'Qual o tamanho de sua imaginação?' : 'How big is your imagination?'}</h3>
+          <div className="flex flex-rox justify-center">
             <input
               name="blockQuant"
               type="text"

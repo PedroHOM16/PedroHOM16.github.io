@@ -1,6 +1,7 @@
 import React, { useContext, useState } from 'react';
 import { Redirect } from 'react-router-dom';
 import PortContext from '../context/PortContext';
+import '../index.css'
 
 export default function Login() {
   const { language, setLanguage, clientName, setClientName } = useContext(PortContext);
@@ -20,6 +21,8 @@ export default function Login() {
     } if (clientName.length === 0 && language === 'Port') {
         return alert('Por favor, se apresente! Insira seu primeiro nome no input.');
     }
+    localStorage.setItem('language', language);
+    localStorage.setItem('clientName', clientName);
     return setLoginBool(true);
   }
 
@@ -27,7 +30,7 @@ export default function Login() {
     loginBool
     ? <Redirect to="/home" />
     : (
-      <div className='m-auto bg-slate-900 text-zinc-300 text-mono flex flex-col items-center'>
+      <div className='bg-slate-900 text-zinc-300 text-mono flex flex-col items-center'>
         <h2 className='md:text-4xl md:mb-6 sm:text-3xl sm:mb-4 text-2xl mb-2'>Hey there!</h2>
         <h3 className='md:text-4xl sm:text-3xl text-2xl'>Please, let me know you:</h3>
         <input

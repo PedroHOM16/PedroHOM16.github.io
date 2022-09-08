@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/static/css/main.d1d4cb82.css",
-    "main.js": "/static/js/main.78507a83.js",
+    "main.css": "/static/css/main.ebabc1c7.css",
+    "main.js": "/static/js/main.a8814ad2.js",
     "static/js/787.68dbee1e.chunk.js": "/static/js/787.68dbee1e.chunk.js",
     "static/media/resume.jpg": "/static/media/resume.8d1dcf03b51b4974ae76.jpg",
     "static/media/perfil-1.jpeg": "/static/media/perfil-1.fe467cd7bbc4c3db65fb.jpeg",
@@ -21,7 +21,6 @@
     "static/media/zelda-1.jpeg": "/static/media/zelda-1.60aaaac68972a5dacc57.jpeg",
     "static/media/beatles-1.jpg": "/static/media/beatles-1.f887a9b6ce105696543a.jpg",
     "static/media/perfil-4.jpeg": "/static/media/perfil-4.0b66d6183fbae61c135f.jpeg",
-    "static/media/foto-header.jpg": "/static/media/foto-header.7101ac3dcad590bf636b.jpg",
     "static/media/pink-floyd-2.jpg": "/static/media/pink-floyd-2.44966446db6e46c897a0.jpg",
     "static/media/perfil-5.jpeg": "/static/media/perfil-5.b63ac82a94cc3efe287a.jpeg",
     "static/media/pink-floyd-1.jpg": "/static/media/pink-floyd-1.54e1d84b52c86254f3b1.jpg",
@@ -30,12 +29,12 @@
     "static/media/front.jpg": "/static/media/front.5cd387895bd1d3aee471.jpg",
     "static/media/db.jpg": "/static/media/db.84f92ead6a070fe15a39.jpg",
     "index.html": "/index.html",
-    "main.d1d4cb82.css.map": "/static/css/main.d1d4cb82.css.map",
-    "main.78507a83.js.map": "/static/js/main.78507a83.js.map",
+    "main.ebabc1c7.css.map": "/static/css/main.ebabc1c7.css.map",
+    "main.a8814ad2.js.map": "/static/js/main.a8814ad2.js.map",
     "787.68dbee1e.chunk.js.map": "/static/js/787.68dbee1e.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.d1d4cb82.css",
-    "static/js/main.78507a83.js"
+    "static/css/main.ebabc1c7.css",
+    "static/js/main.a8814ad2.js"
   ]
 }

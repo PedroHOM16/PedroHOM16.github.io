@@ -84,9 +84,9 @@ export default class WaterColor extends Component {
           />      
         </div>
         <button
-          className="text-4xl text-lime-300 hover:text-red-800 ml-1"
+          className="text-4xl container text-lime-300 hover:text-red-800 ml-1"
           onClick={ this.handleColorChange }
-        >maisCores&#187;</button>
+        >&#187;</button>
       </section>
     )
   }

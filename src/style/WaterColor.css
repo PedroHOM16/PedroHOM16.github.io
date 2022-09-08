@@ -1,10 +1,4 @@
-.watercolor {
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    margin-top: 2%;
-    margin-left: 2%;
-}
+
 .box {
     border: solid 1px rgb(1, 1, 1);
 }
@@ -15,18 +9,4 @@
 }
 .W {
     border-radius: 100%;
-}
-
-.botao {
-    height: 20px;
-    width: 20px;
-    margin-left: 2%;
-    border: solid 2px black;
-    padding-top: 0rem;
-}
-.shuffle-icon {
-    vertical-align: middle;
-    align-self: flex-start;
-    margin-bottom: 10px;
-    margin-left: -7px;
 }

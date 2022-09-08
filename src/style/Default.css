@@ -1,11 +1,11 @@
-.header {
+/* .header {
     background-image: url('../images/foto-header.jpg');
     display: flex;
     flex-direction: column;
     width: 100%;
-    height: 800px;
+    height: 100%;
     flex-wrap: wrap;
-}
+} */
 .title {
     font-family: "Marker Felt", fantasy;
     text-align: center;
