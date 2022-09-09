@@ -2,37 +2,12 @@ import React from 'react';
 import Card from '../component/Card';
 import Footer from '../component/Footer';
 import Header from '../component/Header';
-// import perfil1 from '../images/personal/perfil-1.jpeg'
-import perfil2 from '../images/personal/perfil-2.jpeg';
-// import perfil3 from '../images/personal/perfil-3.jpeg'
-import perfil4 from '../images/personal/perfil-4.jpeg';
-import perfil5 from '../images/personal/perfil-5.jpeg';
-import beatles from '../images/bands/beatles-1.jpg';
-import floyd1 from '../images/bands/pink-floyd-1.jpg';
-import floyd2 from '../images/bands/pink-floyd-2.jpg';
-import amigur from '../images/hobbies/amigurumi-1.jpg';
-import jardAnim from '../images/hobbies/jardim-animais.jpg';
-import bikeGuitar from '../images/hobbies/bike-guitarra.jpg';
-import lisa from '../images/love/lisa.jpg';
-import amora from '../images/love/amora.jpg';
-import zelda1 from '../images/games/zelda-1.jpeg'
-import zelda2 from '../images/games/zelda-2.jpeg'
-import zelda3 from '../images/games/zelda-3.jpeg'
-import stardew1 from '../images/games/stardew-1.jpeg'
-import stardew2 from '../images/games/stardew-2.jpeg'
-import stardew3 from '../images/games/stardew-3.jpeg'
-import unite1 from '../images/games/unite-1.jpeg'
-import arceus1 from '../images/games/arceus-1.jpeg'
-import arceus2 from '../images/games/arceus-2.jpeg'
-
-
-const photos = [perfil2, perfil4, perfil5,];
-const bands = [beatles, floyd1, floyd2];
-const hobbies = [amigur, jardAnim, bikeGuitar];
-const love = [lisa, amora];
-const games = [zelda1, zelda2, zelda3, stardew1, stardew2, stardew3, unite1, arceus1, arceus2];
+import images from '../images'
+// import getMusics from '../support/musicsAPI';
 
 export default function AboutMe() {
+  // const dataApiMusics = async (param) => {await getMusics(param)};
+  const { photos, hobbies, love, games, bands } = images;
   const language = localStorage.getItem('language');
   if (language === 'Port') {
     return (
@@ -55,14 +30,17 @@ export default function AboutMe() {
             <p className='text-zinc-200 w-80 mt-24 text-sm md:text-lg lg:ml-24'>
               O resultado? em 2013 abandonei o curso para ingressar em outra faculdade e seguir minha paixão: a Música!
               também na UFU. Essa não durou muito tempo, decidi que a música era somente um hobby e então voltei para a Aventura inicial,
-              porém em outra instituição particular. Agora sim! Formei em Administração de empresas em 2018 e trabalhei em diversos setores administrativos:
+              porém em outra instituição particular. 
+              <br />
+              <br/>
+              Agora sim!    Formei em Administração de empresas em 2018 e trabalhei em diversos setores administrativos:
               Administração interna, Estoque, Vendas, Planejamento e Gestão, Financeiro e Bancos.
             </p>
           </div>
   
           <div className='flex flex-col sm:flex-row justify-between mr-10'>
             <p className='text-zinc-200 w-80 mt-24 ml-10 text-sm md:text-lg lg:ml-24'>
-              Agora, pensando bem, que ótima escolha a minha! Pude perceber como funciona uma organização
+              Pensando bem, que ótima escolha a minha! Pude perceber como funciona uma organização
               de ponta a ponta, atuar com clientes diretamente e lidar com suas necessidades, desenvolver
               soluções com planilhas, cumprir metas e, a melhor parte, descobri o que realmente me motiva
               em um ambiente corporativo: Resolver problemas!
@@ -123,7 +101,15 @@ export default function AboutMe() {
                 What a wonderful world
               </p>
             </div>
-            <Card imgArray={bands} string='Músicas:' />
+            <div>
+              <Card imgArray={bands} string='Músicas:' />
+              {/* <audio className='' src={ dataApiMusics('what-a-wonderful-world').preview } controls>
+                <track kind="captions" />
+                O seu navegador não suporta o elemento
+                <code>audio</code>
+                .
+              </audio> */}
+            </div>
           </div>
         </div>
         <Footer />
@@ -151,14 +137,17 @@ export default function AboutMe() {
             <p className='text-zinc-200 w-80 mt-24 text-sm md:text-lg lg:ml-24'>
               The result? in 2013 I abandoned the course to join another college and follow my passion: Music!
               also at UFU. This one didn't last long, I decided that music was just a hobby and so I went back to the initial Adventure,
-              but in another private institution. Now yes! I graduated in Business Administration in 2018 and worked in several administrative sectors:
+              but in another private institution.
+              <br/>
+              <br/>
+              Now yes!       I graduated in Business Administration in 2018 and worked in several administrative sectors:
               Internal administration, Inventory, Sales, Planning and Management, Finance and Banking.
             </p>
           </div>
   
           <div className='flex flex-col sm:flex-row justify-between mr-10'>
             <p className='text-zinc-200 w-80 mt-24 ml-10 text-sm md:text-lg lg:ml-24'>
-              Now, on second thought, what a great choice I made! I could understand how an organization works
+              On second thought, what a great choice I made! I could understand how an organization works
               end-to-end, work with customers directly and deal with their needs, develop
               solutions with spreadsheets, meeting goals and, the best part, I discovered what really motivates me
               in a corporate environment: Solve problems!
