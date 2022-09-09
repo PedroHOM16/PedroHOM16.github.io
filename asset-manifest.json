@@ -1,0 +1,40 @@
+{
+  "files": {
+    "main.css": "/static/css/main.7bc362cd.css",
+    "main.js": "/static/js/main.b1631b95.js",
+    "static/js/787.68dbee1e.chunk.js": "/static/js/787.68dbee1e.chunk.js",
+    "static/media/resume.jpg": "/static/media/resume.6aca7a9f5947bb730e07.jpg",
+    "static/media/perfil-1.jpeg": "/static/media/perfil-1.fe467cd7bbc4c3db65fb.jpeg",
+    "static/media/stardew-2.jpeg": "/static/media/stardew-2.b593012fe5a0c160b938.jpeg",
+    "static/media/arceus-1.jpeg": "/static/media/arceus-1.f54d827baf5bb2054d0c.jpeg",
+    "static/media/arceus-2.jpeg": "/static/media/arceus-2.bc9283b9a771a86502eb.jpeg",
+    "static/media/unite-1.jpeg": "/static/media/unite-1.63e6923126f3493248ef.jpeg",
+    "static/media/zelda-3.jpeg": "/static/media/zelda-3.f8177217162b56fbe342.jpeg",
+    "static/media/stardew-1.jpeg": "/static/media/stardew-1.3879a9f0d3a24bea446b.jpeg",
+    "static/media/perfil-2.jpeg": "/static/media/perfil-2.4d6257a126463d06cff1.jpeg",
+    "static/media/stardew-3.jpeg": "/static/media/stardew-3.8258ed65b0f068b1b03d.jpeg",
+    "static/media/jardim-animais.jpg": "/static/media/jardim-animais.a08f4c4096db35dd9a5f.jpg",
+    "static/media/bike-guitarra.jpg": "/static/media/bike-guitarra.ca8234afb01e5254c001.jpg",
+    "static/media/amora.jpg": "/static/media/amora.368c950ae9a173da29f9.jpg",
+    "static/media/zelda-2.jpeg": "/static/media/zelda-2.0592218e3c812da0e98d.jpeg",
+    "static/media/lisa.jpg": "/static/media/lisa.69d088e4c0c059649497.jpg",
+    "static/media/zelda-1.jpeg": "/static/media/zelda-1.60aaaac68972a5dacc57.jpeg",
+    "static/media/beatles-1.jpg": "/static/media/beatles-1.f887a9b6ce105696543a.jpg",
+    "static/media/perfil-4.jpeg": "/static/media/perfil-4.0b66d6183fbae61c135f.jpeg",
+    "static/media/pink-floyd-2.jpg": "/static/media/pink-floyd-2.44966446db6e46c897a0.jpg",
+    "static/media/perfil-5.jpeg": "/static/media/perfil-5.b63ac82a94cc3efe287a.jpeg",
+    "static/media/pink-floyd-1.jpg": "/static/media/pink-floyd-1.54e1d84b52c86254f3b1.jpg",
+    "static/media/amigurumi-1.jpg": "/static/media/amigurumi-1.c9783bc2bfd9856b1785.jpg",
+    "static/media/back.jpg": "/static/media/back.be41264c33e7ce57d6fb.jpg",
+    "static/media/front.jpg": "/static/media/front.5cd387895bd1d3aee471.jpg",
+    "static/media/db.jpg": "/static/media/db.84f92ead6a070fe15a39.jpg",
+    "index.html": "/index.html",
+    "main.7bc362cd.css.map": "/static/css/main.7bc362cd.css.map",
+    "main.b1631b95.js.map": "/static/js/main.b1631b95.js.map",
+    "787.68dbee1e.chunk.js.map": "/static/js/787.68dbee1e.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.7bc362cd.css",
+    "static/js/main.b1631b95.js"
+  ]
+}
