@@ -33,7 +33,7 @@ export default function AboutMe() {
               porém em outra instituição particular. 
               <br />
               <br/>
-              Agora sim!     Formei em Administração de empresas em 2018 e trabalhei em diversos setores administrativos:
+              Agora sim!    Formei em Administração de empresas em 2018 e trabalhei em diversos setores administrativos:
               Administração interna, Estoque, Vendas, Planejamento e Gestão, Financeiro e Bancos.
             </p>
           </div>
