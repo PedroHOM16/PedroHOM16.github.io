@@ -123,7 +123,7 @@ export default function DefaultPage() {
         :
         <div>
           <div className='flex'>
-            <span className='font-mono text-red-600 ml-16 text-lg'>{language === 'Eng' ? `Congrats ${clientName}!! You-ve done ${score} points ` : `Parabéns ${clientName}!! Você fez ${score} pontos! `}</span>
+            <span className='font-mono text-red-600 ml-16 text-lg'>{language === 'Eng' ? `Congratulations ${clientName}!! You-ve done ${score} points ` : `Parabéns ${clientName}!! Você fez ${score} pontos! `}</span>
           </div>
           <div className='flex flex-wrap'>
             {listChances
