@@ -1,5 +1,5 @@
 const tailwind = {
-  home: {
+  havfun: {
     App: "bg-gray-900 w-full text-center",
     Tittle: "text-zinc-200 lg:text-4xl sm:text-3xl mt-4 mb-4 ml-4 text-xl",
     StackCard: "mb-4",
@@ -7,7 +7,7 @@ const tailwind = {
     Paintbox: "h-screen h-1/2 bg-fixed bg-cover bg-no-repeat bg-[url('images/bg/madeira-3.jpg')]",
     // PokeGame: "W-5/4  bg-cover bg-[url('images/bg/pokemon-3.jpg')]",
   },
-  login: {
+  home: {
     App: "bg-slate-900 text-zinc-300 text-mono",
     Name: "text-xl sm:text-2xl md:text-5xl  m-2 text-center",
     BodyAll: "flex flex-col bg-slate-800 m-4 text-md sm:text-lg",
@@ -41,11 +41,11 @@ const tailwind = {
     Tittle: "text-sm text-gray-600",
   },
   pokemon: {
-    App: "W-5/4  bg-cover bg-[url('images/bg/pokemon-3.jpg')]",
+    App: "W-5/4 mt-2 bg-cover bg-[url('images/bg/pokemon-3.jpg')]",
     Game: "w-full",
     GameTittle: "font-mono text-red-600 hover:text-red-400 text-lg pt-2",
     JumpWrn: "text-gray-700 hover:text-red-400",
-    Label: "flex mx-1/2",
+    Label: "flex mx-1/2 items-center",
     InputPk: "border-2 text-center border-orange-500 text-gray-900 text-sm rounded-lg",
     BtnPk: "text-white bg-gradient-to-br from-pink-500 to-orange-400 hover:bg-gradient-to-bl rounded-lg text-sm p-2 text-center",
     Score: "font-mono text-red-600",

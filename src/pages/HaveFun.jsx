@@ -22,19 +22,19 @@ export default function Home() {
 
   if (langLocalStorage === 'Port') {
     return (
-      <div className= { T.home.App }>
+      <div className= { T.havfun.App }>
         <Header />
-        {/* <div className={ T.home.StackCard }>
+        {/* <div className={ T.havfun.StackCard }>
           <Card imgArray={stacks} string='Stacks:' />
         </div> */}
-        <div className={ T.home.HavFun }>
+        <div className={ T.havfun.HavFun }>
           <div 
-            className={ T.home.Paintbox }
+            className={ T.havfun.Paintbox }
             // style={{backgroundImage: {beatles} }}
           >
             <PaintBox />
           </div>
-          <div className={ T.home.PokeGame }>
+          <div className={ T.havfun.PokeGame }>
             <Pokemon />
           </div>
         </div>
@@ -43,17 +43,17 @@ export default function Home() {
     )
   } if (langLocalStorage === 'Eng') {
     return (
-      <div className= { T.home.App }>
+      <div className= { T.havfun.App }>
         <Header />
-        <div className={ T.home.StackCard }>
+        <div className={ T.havfun.StackCard }>
           <Card imgArray={stacks} string='Stacks:' />
         </div>
-        <h1 className={ T.home.TitleHavFun }>Have fun:</h1>
-        <div className={ T.home.HavFun }>
-          <div className={ T.home.Paintbox }>
+        <h1 className={ T.havfun.TitleHavFun }>Have fun:</h1>
+        <div className={ T.havfun.HavFun }>
+          <div className={ T.havfun.Paintbox }>
             <PaintBox />
           </div>
-          <div className={ T.home.PokeGame }>
+          <div className={ T.havfun.PokeGame }>
             <Pokemon />
           </div>
         </div>

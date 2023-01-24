@@ -1,10 +1,12 @@
-import React, { useEffect, useState } from 'react';
+import React, { useEffect, useState, useContext } from 'react';
 import { fetchingByNameOrId } from '../support/fetchingDatas';
 import '../index.css'
+import PortContext from '../context/PortContext';
 import T from '../style/tailwind'
 // import { setSelectionRange } from '@testing-library/user-event/dist/utils';
 
 export default function DefaultPage() {
+  const { language, clientName } = useContext(PortContext);
   const [pokemon, setPokemon] = useState('');
   const [inputValue, setInputValue] = useState('');
   const [boolCheck, setBoolCheck] = useState(false);
@@ -68,8 +70,6 @@ export default function DefaultPage() {
     setIdPokemons([]);
   }
 
-  const language = localStorage.getItem('language');
-  const clientName = localStorage.getItem('clientName')
 
   return (
     <div className={T.pokemon.App}>
@@ -78,8 +78,11 @@ export default function DefaultPage() {
         <div className={T.pokemon.Game}>
           <div>
             <h1 className={T.pokemon.GameTittle}>
-              {language === 'Eng' ? `${clientName}, Who's that Pokemon ?` : `${clientName}, Quem é esse Pokemon?`}
+              {language === 'Eng' ? `${clientName ? `Hey!!  ${clientName}!!` : "Hey!! You!!" }` : `${clientName ? `Ei!! você mesmo ${clientName}!!` : "Ei!! você!!" }`}
             </h1>
+            <h2 className={T.pokemon.GameTittle}>
+              {language === 'Eng' ? `Who's that Pokemon ?` : `Qem é esse Pokemon?`}
+            </h2>
             <p className={T.pokemon.JumpWrn}>
               {language === 'Eng' ? `Don't know? sKiP to the Next !` : `Se não sabe, vá para o próximo!`}
             </p>
@@ -98,7 +101,7 @@ export default function DefaultPage() {
                 {language === 'Eng' ? 'Next' : 'Próximo'}
               </button>
             </div>
-            <span className={T.pokemon.Score}>{language === 'Eng' ? `Score: ` : `Pontuação: `}
+            <span className={T.pokemon.Score}>{language === 'Eng' ? `${clientName || "your"}'s Score: ` : `Pontuação: `}
               {score}
             </span>
             {loading
