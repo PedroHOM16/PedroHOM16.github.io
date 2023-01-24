@@ -1,217 +1,169 @@
 import React from 'react';
+import { useState } from 'react';
 import Card from '../component/Card';
 import Footer from '../component/Footer';
 import Header from '../component/Header';
 import images from '../images'
+import T from '../style/tailwind'
+import setaDir from '../images/icons/seta-direita1.png'
 // import getMusics from '../support/musicsAPI';
+
+// <Card imgArray={photos} string='Fotos pessoais:' />
 
 export default function AboutMe() {
   // const dataApiMusics = async (param) => {await getMusics(param)};
-  const { photos, hobbies, love, games, bands } = images;
+  const { photos } = images;
   const language = localStorage.getItem('language');
+  const [admBool, setAdmBool]= useState(false)
+  const [admCount, setAdmCount]= useState(0)
+  const [musicBool, setMusicBool]= useState(false)
+  const [musicCount, setMusicCount]= useState(0)
+  const [devBool, setDevBool]= useState(false)
+  const [phtBool, setPhtBool]= useState(false)
+  const [devCount, setDevCount]= useState(0)
+
+  const administration = [
+      "- Entrei na faculdade de Administração em 2010, logo após o ensino médio, na UFU (Universidade Federal de Uberlândia).",
+      "- Meu primeiro estágio em 2012 na radio universitária da UFU.",
+      "- No início de 2013 Abri um estudio musical: O Laboratório!.",
+      "- No meio do ano fiz minha primeira transição de carreira: Abandonei o curso de Administração de empresas para entrar na Música, na mesma universidade.",
+      "- Enquanto isso, conclui um curso de Banco de dados: Access.",
+      "- Voltei para concluir o curso, desta vez em uma particular: UNA.",
+      "- Durante este percurso trabalhei como estoquista de uma loja de roupas aqui em Uberlândia: OPPEN, no escritório administrativos, por intensos 3 meses.",
+      "- Logo após fui trabalhar no escritório de uma empresa corretora de seguros: Real Corretora de Seguros.",
+      "- Até conseguir um estágio no INSS.",
+      "- Em todas estas experiências, sempre obtive olhares sistemáticos para processos internos, pensando em melhoria de vida para as pessoas colegas de trabalho.",
+      "- No INSS, pude trabalhar, estudar música e concluir minha faculdade de Administração em 2018.",
+      "- Em 2019 participei de um processo seletivo no Banco Bradesco s/a, entrei em abril.",
+      "- Atendi os 3 primeiros meses na linha de frente, no 'Posso ajudar?', até me transferirem para cidade de Campina Verde - MG.",
+      "- Aqui não se tinha uma posição ao certo, devido a pequena quantidade de funcionários para tanta demanda.",
+      "- 'Posso Ajudar', Abertura de Caixa, Manutenção de Caixas Eletrônicos, Atendimento de contas pessoa física, Venda de produtos (metas), Processos judiciais, Arquivos do Banco e uso do sistema bradesco para todos os serviços.",
+      "- Foi um ótimo desafio, onde a cada dia, uma novidade.",
+      "- Em 2020, com o início da pandemia, fui trabalhar remotamente, em uma extratégia não muito bem elaborada.",
+      "- Não fiquei satisfeito com minhas novas atribuições e senti que devia investir em conhecimento.",
+      "- Pedi acerto no Banco, e comecei a estudar para o ENEM (isso mesmo kkk).",
+      "- Nesse período (2021) trabalhei na ASSINO crédito imobiliário, remotamente.",
+      "- Conheci a Trybe.",
+      "- Obtive todo o alinhamento entre meus conhecimentos anteriores, programação, e mercado de trabalho, hard skills e soft skills.",
+      "- Grandes desafios ao longo de 2022, com projetos em grupo, com metodologias ágeis utilizadas no mercado.",
+      "- Posso dizer que minha graduação está mais poderosa.",
+    ];
+
+  const music = [
+    "- Começou nos meus 6 anos, por influência da família, uma criança soprando flauta-doce.",
+    "- Já aos 8 comecei o violão.",
+    "- Aos 12 já tocava e cantava.",
+    "- Aos 15 abandonei o violão e fui para guitarra.",
+    "- Aos 17 tive minha primeira banda: The Nine, cover dos Beatles.",
+    "- Fazia shows em uma quinta-feira por mês no Mercado Municipal de Uberlândia, algumas boates e festas também.",
+    "- Aos 22 entrei para o Bacharelado de Violão na UFU (Universidade Federal de Uberlândia).",
+    "- Conclui quase todas as matérias teóricas, porém o Violão deixou a desejar. Estudar Violão erudito é uma tarefa complicada para mim.",
+    "- Gosto de tocar minhas músicas, na resenha ou no quarto.",
+    "- Mas pretendo ainda poder concluir esta graduação, quem sabe.",
+  ];
+
+  const developer = [
+    "- Desde novo tive interesse em games, e na época (2004) não tinha tão fácil acesso.",
+    "- Começa meu primeiro contato com PC, em que tive que me virar para configurar setups de games.",
+    "- Quando entrei na faculdade de Administração, voltei meus estudos para ferramentas Office: Excel, PowerPoint e Access.",
+    "- Tive contato com vários sistemas Administrativos, me despertava interesse na construção e na resposta destes sistemas.",
+    "- Fiz um sistema no Access para uma locadora de vídeos, a fins didáticos.",
+    "- Planilhas de Excel em todas as experiências profissionais que tive, testadas e comprovadas (exceto Banco Bradesco).",
+    "- Após minha passagem no Banco Bradesco, fui em busca de conhecimento e essa busca foi afunilando...",
+    "- Até conhecer a Trybe, um curso remoto, porém com mais de 1500 horas síncronas.",
+    "- Mais de 30 projetos, dentre eles grandes desafios de ponta a ponta, individual e em grupo.",
+    "- Pude conhecer metodologias ágeis aplicadas no mercado da tecnologia.",
+    "- Arquiteturas, controle de rotas, tipagem de dados, além daquele frontzinho no estilo.",
+    "- Hoje o que mais gosto de fazer é solucionar problemas para amigos que possuem algum negócio, mesmo que individual.",
+    "- Busco experiência! E quero trabalhar em grandes projetos! Quero exercitar minha capacidade de desenvolver, code reviews, refatoração e matar erros.",
+  ];
+  
+
+  
+
+  const onClickAdm = () => admBool ? setAdmBool(false) : setAdmBool(true);
+  const onClickMusic = () => musicBool ? setMusicBool(false) : setMusicBool(true);
+  const onClickDev = () => devBool ? setDevBool(false) : setDevBool(true);
+  const onClickPht = () => phtBool ? setPhtBool(false) : setPhtBool(true);
+
+  const nextPhraseAdm = () => administration.length - 1 === admCount ? setAdmCount(0) : setAdmCount(admCount + 1);
+  const nextPhraseMusic = () => music.length - 1 === musicCount ? setMusicCount(0) : setMusicCount(musicCount + 1);
+  const nextPhraseDev = () => developer.length - 1 === devCount ? setDevCount(0) : setDevCount(devCount + 1);
+  
   if (language === 'Port') {
     return (
-      <div className='bg-gray-900'>
+      <div className={T.aboutMe.App}>
         <Header />
-        <div className='flex flex-col ml-2'>
-          <h1 className='text-zinc-200 lg:text-4xl sm:text-3xl text-2xl ml-4 mt-4 hover:text-lime-400'>Quem sou eu:</h1>
-  
-          <div className='flex flex-col sm:flex-row justify-between mr-10'>
-            <p className='text-zinc-200 w-80 mt-24 ml-10 text-sm md:text-lg lg:ml-24'>
-              Existem certas escolhas nossas que, em um primeiro momento,
-              podemos achar uma grande tolice. Acontece que em 2010, sem saber pra onde ir,
-              fui ingressar na faculdade de Administração na UFU (Universidade Federal de Uberlândia).
-            </p>
-            <Card imgArray={photos} string='Fotos pessoais:' />
-          </div>
-  
-          <div className='flex flex-col sm:flex-row justify-between mr-10'>
-            <Card imgArray={hobbies} string='Hobbies:' />
-            <p className='text-zinc-200 w-80 mt-24 text-sm md:text-lg lg:ml-24'>
-              O resultado? em 2013 abandonei o curso para ingressar em outra faculdade e seguir minha paixão: a Música!
-              também na UFU. Essa não durou muito tempo, decidi que a música era somente um hobby e então voltei para a Aventura inicial,
-              porém em outra instituição particular. 
-              <br />
-              <br/>
-              Agora sim!    Formei em Administração de empresas em 2018 e trabalhei em diversos setores administrativos:
-              Administração interna, Estoque, Vendas, Planejamento e Gestão, Financeiro e Bancos.
-            </p>
-          </div>
-  
-          <div className='flex flex-col sm:flex-row justify-between mr-10'>
-            <p className='text-zinc-200 w-80 mt-24 ml-10 text-sm md:text-lg lg:ml-24'>
-              Pensando bem, que ótima escolha a minha! Pude perceber como funciona uma organização
-              de ponta a ponta, atuar com clientes diretamente e lidar com suas necessidades, desenvolver
-              soluções com planilhas, cumprir metas e, a melhor parte, descobri o que realmente me motiva
-              em um ambiente corporativo: Resolver problemas!
-            </p>
-            <Card imgArray={love} string='Paixões:' />
-          </div>
-  
-          <div className='flex flex-col sm:flex-row justify-between mr-10'>
-            <Card imgArray={games} string='Games:' />
-            <p className='text-zinc-200 w-80 mt-24 ml-10 text-sm md:text-lg lg:ml-24'>
-              Foi em agosto de 2020 que fiz mais uma escolha. Mas agora sei exatamente onde estou indo!
-              Decidi largar o melhor emprego da minha carreira até então (financeiramente falando...) e começar a
-              minha jornada para ser um Profissional da tecnologia. A cada nova ferramenta estudada, me sentia com
-              mais poderes e hoje procuro usá-los sob supervisão de uma empresa que tenha comprometimento com inovação
-              e tecnologia.
-            </p>
-          </div>
-  
-          <div className='flex flex-col lg:flex-row justify-between mr-10'>
-            <div className='flex flex-col mr-10'>
-              <p className='text-zinc-200 w-80 mt-24 ml-10 text-sm md:text-lg lg:ml-24'>
-                Quero encerrar esse texto com uma letra de uma música de LouisArmstrong que muito me inspira:
-              </p>
-              <p className='text-sky-200 w-96 mt-4 sm:ml-10'>
-                I see trees of green, red roses, too,
-                {<br/>}
-                I see them bloom, for me and you
-                {<br/>}
-                And I think to myself
-                {<br/>}
-                What a wonderful world.
-              </p>
-              <p className='text-lime-200 w-96 mt-4 sm:ml-24'>
-                I see skies of blue, and clouds of white,
-                {<br/>}
-                The bright blessed day, the dark sacred night
-                {<br/>}
-                And I think to myself
-                {<br/>}
-                What a wonderful world.
-              </p>
-              <p className='text-amber-200 w-96 mt-4 sm:ml-36'>
-                The colors of the rainbow, so pretty in the sky,
-                {<br/>}
-                Are also on the faces of people going by.
-                {<br/>}
-                I see friends shaking hands, sayin', "How do you do?"
-                {<br/>}
-                They're really sayin', "I love you."
-              </p>
-              <p className='text-pink-200 w-96 mt-4 sm:ml-48 mb-8'>
-                I hear babies cryin'. I watch them grow.
-                {<br/>}
-                They'll learn much more than I'll ever know
-                {<br/>}
-                And I think to myself
-                {<br/>}
-                What a wonderful world
-              </p>
+        <div className={T.aboutMe.Body}>
+          <h1 className={T.aboutMe.Tittle}>Pedro Henrique Oliveira de Moura</h1>
+          <div className={T.aboutMe.Experiences}>
+
+            <div className={T.aboutMe.Adm}>
+              <button
+                type='button'
+                onClick={onClickAdm}
+              >Administração</button>
+              {
+                admBool
+                && <div className={ T.aboutMe.PhraseAdm}>
+                  <button
+                    onClick={nextPhraseAdm}
+                    value={setaDir}
+                  >{administration[admCount]}</button>
+                </div>
+              }
             </div>
-            <div>
-              <Card imgArray={bands} string='Músicas:' />
-              {/* <audio className='' src={ dataApiMusics('what-a-wonderful-world').preview } controls>
-                <track kind="captions" />
-                O seu navegador não suporta o elemento
-                <code>audio</code>
-                .
-              </audio> */}
+            <div className={T.aboutMe.Music}>
+              <button
+                type='button'
+                onClick={onClickMusic}
+              >Musica</button>
+              {
+                musicBool
+                && <div className={ T.aboutMe.PhraseMusic}>
+                  <button
+                    onClick={nextPhraseMusic}
+                  >{music[musicCount]}</button>
+                </div>
+              }
             </div>
+            <div className={T.aboutMe.Developer}>
+              <button
+                type='button'
+                onClick={onClickDev}
+              >Desenvolvedor</button>
+              {
+                devBool
+                && <div className={ T.aboutMe.PhraseDev}>
+                  <button
+                    onClick={nextPhraseDev}
+                  >{developer[devCount]}</button>
+                </div>
+              }
+            </div>
+            <div className={T.aboutMe.Photos}>
+              <button
+                type='button'
+                onClick={onClickPht}
+              >Fotos</button>
+              {
+                phtBool
+                && <Card imgArray={photos} string='Fotos pessoais:' /> 
+              }
+            </div>
+
           </div>
         </div>
-        <Footer />
-      </div>)
+        <Footer/>
+      </div>
+    )
   }
-  
+
   if (language === 'Eng') {
     return (
-      <div className='bg-gray-900'>
+      <div className={T.aboutMe.App}>
         <Header />
-        <div className='flex flex-col ml-2'>
-          <h1 className='text-zinc-200 lg:text-4xl sm:text-3xl text-2xl ml-4 mt-4 hover:text-lime-400'>Who am I:</h1>
-  
-          <div className='flex flex-col sm:flex-row justify-between mr-10'>
-            <p className='text-zinc-200 w-80 mt-24 ml-10 text-sm md:text-lg lg:ml-24'>
-              There are certain self choices of ours that, at first,
-              we may find it a great folly. It turns out that in 2010, not nkowing where to go,
-              i joined tha Faculty of Business Administration at UFU (Federal University of Uberlândia-MG Brazil).
-            </p>
-            <Card imgArray={photos} string='Personal photos:' />
-          </div>
-  
-          <div className='flex flex-col sm:flex-row justify-between mr-10'>
-            <Card imgArray={hobbies} string='Hobbies:' />
-            <p className='text-zinc-200 w-80 mt-24 text-sm md:text-lg lg:ml-24'>
-              The result? in 2013 I abandoned the course to join another college and follow my passion: Music!
-              also at UFU. This one didn't last long, I decided that music was just a hobby and so I went back to the initial Adventure,
-              but in another private institution.
-              <br/>
-              <br/>
-              Now yes!       I graduated in Business Administration in 2018 and worked in several administrative sectors:
-              Internal administration, Inventory, Sales, Planning and Management, Finance and Banking.
-            </p>
-          </div>
-  
-          <div className='flex flex-col sm:flex-row justify-between mr-10'>
-            <p className='text-zinc-200 w-80 mt-24 ml-10 text-sm md:text-lg lg:ml-24'>
-              On second thought, what a great choice I made! I could understand how an organization works
-              end-to-end, work with customers directly and deal with their needs, develop
-              solutions with spreadsheets, meeting goals and, the best part, I discovered what really motivates me
-              in a corporate environment: Solve problems!
-            </p>
-            <Card imgArray={love} string='Love:' />
-          </div>
-  
-          <div className='flex flex-col sm:flex-row justify-between mr-10'>
-            <Card imgArray={games} string='Games:' />
-            <p className='text-zinc-200 w-80 mt-24 ml-10 text-sm md:text-lg lg:ml-24'>
-              It was in August 2020 that I made another choice. But now I know exactly where I'm going!
-              I decided to quit the best job of my career so far (financially speaking...) and start
-              my journey to be a technology professional. With each new tool studied, I felt with
-              more powers and today I try to use them under the supervision of a company that is committed to innovation
-              and technology.
-            </p>
-          </div>
-  
-          <div className='flex flex-col lg:flex-row justify-between mr-10'>
-            <div className='flex flex-col mr-10'>
-              <p className='text-zinc-200 w-80 mt-24 ml-10 text-sm md:text-lg lg:ml-24'>
-                I want to end this text with a lyric from a song by LouisArmstrong that inspires me a lot:
-                </p>
-              <p className='text-sky-200 w-96 mt-4 sm:ml-10'>
-                I see trees of green, red roses, too,
-                {<br/>}
-                I see them bloom, for me and you
-                {<br/>}
-                And I think to myself
-                {<br/>}
-                What a wonderful world.
-              </p>
-              <p className='text-lime-200 w-96 mt-4 sm:ml-24'>
-                I see skies of blue, and clouds of white,
-                {<br/>}
-                The bright blessed day, the dark sacred night
-                {<br/>}
-                And I think to myself
-                {<br/>}
-                What a wonderful world.
-              </p>
-              <p className='text-amber-200 w-96 mt-4 sm:ml-36'>
-                The colors of the rainbow, so pretty in the sky,
-                {<br/>}
-                Are also on the faces of people going by.
-                {<br/>}
-                I see friends shaking hands, sayin', "How do you do?"
-                {<br/>}
-                They're really sayin', "I love you."
-              </p>
-              <p className='text-pink-200 w-96 mt-4 sm:ml-48 mb-8'>
-                I hear babies cryin'. I watch them grow.
-                {<br/>}
-                They'll learn much more than I'll ever know
-                {<br/>}
-                And I think to myself
-                {<br/>}
-                What a wonderful world
-              </p>
-            </div>
-            <Card imgArray={bands} string='Songs:' />
-          </div>
-        </div>
-        <Footer />
-      </div>)
+      </div>
+    )
   }
 }

@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import { fetchingByNameOrId } from '../support/fetchingDatas';
 import '../index.css'
+import T from '../style/tailwind'
 // import { setSelectionRange } from '@testing-library/user-event/dist/utils';
 
 export default function DefaultPage() {
@@ -71,53 +72,54 @@ export default function DefaultPage() {
   const clientName = localStorage.getItem('clientName')
 
   return (
-    <div className='border-4 rounded-md container border-zinc-600 border-double'>
+    <div className={T.pokemon.App}>
       {listChances.length < 10
         ?
-        <div className='flex'>
+        <div className={T.pokemon.Game}>
           <div>
-            <h1 className='font-mono text-red-600 ml-3 text-lg pt-2'>
+            <h1 className={T.pokemon.GameTittle}>
               {language === 'Eng' ? `${clientName}, Who's that Pokemon ?` : `${clientName}, Quem é esse Pokemon?`}
             </h1>
-            <p className='text-gray-700 hover:text-red-400'>
-            {language === 'Eng' ? `Don't know? sKiP to the Next !` : `Se não sabe, pULA !`}
+            <p className={T.pokemon.JumpWrn}>
+              {language === 'Eng' ? `Don't know? sKiP to the Next !` : `Se não sabe, vá para o próximo!`}
             </p>
-            <div className='flex mx-auto ml-1 mr-8'>
+            <div className={T.pokemon.Label}>
               <input
-                className='bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-30 p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500'
+                className={T.pokemon.InputPk}
                 placeholder={language === 'Eng' ? 'Type here...' : 'Digite aqui...'}
                 onChange={handleChange}
                 value={inputValue}
               />
               <button
                 type='button'
-                className='text-white bg-gradient-to-br from-pink-500 to-orange-400 hover:bg-gradient-to-bl focus:ring-4 focus:outline-none focus:ring-pink-200 dark:focus:ring-pink-800 font-medium rounded-lg text-sm p-2.5 text-center'
+                className={T.pokemon.BtnPk}
                 onClick={handleClick}
               >
                 {language === 'Eng' ? 'Next' : 'Próximo'}
               </button>
             </div>
-            <span className='ml-3 font-mono text-red-600'>{language === 'Eng' ? `Score: ` : `Pontuação: `}
- {score}</span>
+            <span className={T.pokemon.Score}>{language === 'Eng' ? `Score: ` : `Pontuação: `}
+              {score}
+            </span>
             {loading
-              ? <p className='text-red-800 mb-24'>{language === 'Eng' ? `Loading: ` : `Carregando: `}...</p>
+              ? <p className={T.pokemon.Loading}>{language === 'Eng' ? `Loading: ` : `Carregando: `}...</p>
               : pokemon
               && <img
-                className={boolCheck ? 'contrast-100 w-56 h-64 ml-16' : 'contrast-0 w-52 h-60 ml-16'}
+                className={boolCheck ? 'contrast-100 w-56 h-64 ml-' : 'contrast-0 w-52 h-60 '}
                 id='pokemon-image'
                 src={`https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/${pokemon.id}.png`}
                 alt='Who is that pokemon?' />
             }
-          <div className='flex flex-row flex-wrap'>
-            {listChances
-              && listChances.map((each, id) => {
-                return (
-                    <img className='border-red-600 border rounded-full m-4 p-4' src={each} alt={id} />
-                  // <div className=' border-red-600 border rounded-full m-2 p-2 '>
-                  // </div>
-                )
-              })}
-          </div>
+            <div className={T.pokemon.CapturedPok}>
+              {listChances
+                && listChances.map((each, id) => {
+                  return (
+                    <img className={T.pokemon.Pokebolas} src={each} alt={id} />
+                    // <div className=' border-red-600 border rounded-full m-2 p-2 '>
+                    // </div>
+                  )
+                })}
+            </div>
           </div>
         </div>
         :

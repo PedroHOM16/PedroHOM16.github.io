@@ -55,8 +55,8 @@ export default class WaterColor extends Component {
     const { bxColor1, bxColor2, bxColor3, bxColor4, bxColor5 } = this.state;
     console.log( "cor", bxColor1);
     return (
-      <section>
-        <div className="flex mt-4 ml-5">
+      <section className='my-auto'>
+        <div className="flex items-center ml-8 mt-5 bg-yellow-700 hover:border-sky-200 h-12 w-36 p-2 border-2 border-gray-100">
           <div
             className="box w"
             onClick={ this.handleColor }
@@ -82,12 +82,14 @@ export default class WaterColor extends Component {
             onClick={ this.handleColor }
             style={{backgroundColor: `rgb(${bxColor5})`}}
           />      
+          <button
+            className="text-2xl ml-2 "
+            onClick={ this.handleColorChange }
+          >&#127922;</button>
         </div>
-        <button
-          className="text-4xl container text-lime-300 hover:text-red-800 ml-1"
-          onClick={ this.handleColorChange }
-        >&#187;</button>
+        
       </section>
+      // // 127922
     )
   }
 }

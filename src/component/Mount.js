@@ -1,5 +1,7 @@
 import React, { Component } from 'react';
+import T from '../style/tailwind'
 import '../style/Mount.css'
+import WaterColor from './WaterColor';
 
 export default class Mount extends Component {
   handleColor = ({ target }) => {
