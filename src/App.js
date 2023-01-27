@@ -7,12 +7,20 @@ import AboutMe from './pages/AboutMe';
 import Projects from './pages/Projects';
 import './App.css';
 import PortProvider from './context/PortProvider';
+import photo from './images/personal/perfil-1.jpeg';
+import { Helmet } from 'react-helmet';
+
 
 class App extends Component {
   render () {
     return (
       <BrowserRouter>
         <PortProvider>
+          <Helmet>
+            <title>PedroHenrique-Developer</title>
+            <link rel="photo" href={photo} />
+          </Helmet>
+
           <Switch>
             <Route exact path="/havfun" component={ HaveFun } />
             <Route path="/aboutme" component={ AboutMe } />

@@ -16,9 +16,6 @@ export default function Login() {
 
 
   return (
-    loginBool
-      ? <Redirect to="/havfun" />
-      : (
         <div className={T.home.App}>
           <Header />
           <h2 className={T.home.Name}>Pedro Henrique Oliveira de Moura</h2>
@@ -71,5 +68,4 @@ export default function Login() {
           <Footer />
         </div>
       )
-  )
 }
