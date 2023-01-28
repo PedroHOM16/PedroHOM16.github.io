@@ -1,11 +1,14 @@
-import React from 'react';
-import personal from '../images/personal/perfil-1.jpeg'
+import React, {useContext} from 'react';
+import personal from '../images/personal/perfil-1.jpeg';
+import PortContext from '../context/PortContext';
 
 // fazer parte em ingles ####################################################
 export default function Footer() {
+  const { language, setLanguage, clientName, setClientName } = useContext(PortContext);
+
   return (
     <div className='flex text-sm flex-row bg-slate-800 border border-x-0 border-b-0 border-zinc-400 p-1'>
-      <p className='m-auto text-zinc-200'>Obrigado pela visita, volte quando quiser!</p>
+      <p className='m-auto text-zinc-200'>{language === "Port" ? "Obrigado pela visita, volte quando quiser!" : "Thank you for visiting, come back whenever you want!"}</p>
       <img
         src={ personal }
         alt='foto pessoal'

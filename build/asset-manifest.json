@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/static/css/main.7c3cea3a.css",
-    "main.js": "/static/js/main.17bba8ef.js",
+    "main.css": "/static/css/main.0bdc8468.css",
+    "main.js": "/static/js/main.f0915b7e.js",
     "static/js/787.68dbee1e.chunk.js": "/static/js/787.68dbee1e.chunk.js",
     "static/media/madeira-3.jpg": "/static/media/madeira-3.daf26aa967f39613e27d.jpg",
     "static/media/wallpaper-1.jpg": "/static/media/wallpaper-1.29a17f8844c617631fbb.jpg",
@@ -37,12 +37,12 @@
     "static/media/pedroHenriqueOliveiraDeMoura-19jan23.pdf": "/static/media/pedroHenriqueOliveiraDeMoura-19jan23.c275ff011e18ff486351.pdf",
     "static/media/github-mark-white.svg": "/static/media/github-mark-white.97ed8e7eef60d61ca469881dd6f34511.svg",
     "index.html": "/index.html",
-    "main.7c3cea3a.css.map": "/static/css/main.7c3cea3a.css.map",
-    "main.17bba8ef.js.map": "/static/js/main.17bba8ef.js.map",
+    "main.0bdc8468.css.map": "/static/css/main.0bdc8468.css.map",
+    "main.f0915b7e.js.map": "/static/js/main.f0915b7e.js.map",
     "787.68dbee1e.chunk.js.map": "/static/js/787.68dbee1e.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.7c3cea3a.css",
-    "static/js/main.17bba8ef.js"
+    "static/css/main.0bdc8468.css",
+    "static/js/main.f0915b7e.js"
   ]
 }

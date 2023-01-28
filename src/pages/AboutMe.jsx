@@ -1,10 +1,11 @@
-import React from 'react';
+import React, { useContext } from 'react';
 import { useState } from 'react';
 import Card from '../component/Card';
 import Footer from '../component/Footer';
 import Header from '../component/Header';
 import images from '../images'
 import T from '../style/tailwind'
+import PortContext from '../context/PortContext';
 import setaDir from '../images/icons/seta-direita1.png'
 // import getMusics from '../support/musicsAPI';
 
@@ -13,7 +14,7 @@ import setaDir from '../images/icons/seta-direita1.png'
 export default function AboutMe() {
   // const dataApiMusics = async (param) => {await getMusics(param)};
   const { photos } = images;
-  const language = localStorage.getItem('language');
+  const { language } = useContext(PortContext);
   const [admBool, setAdmBool] = useState(false)
   const [admCount, setAdmCount] = useState(0)
   const [musicBool, setMusicBool] = useState(false)
@@ -152,7 +153,7 @@ export default function AboutMe() {
       <div className={T.aboutMe.App}>
         <Header language={language}/>
         <div className={T.aboutMe.Body}>
-          <h1 className={T.aboutMe.Tittle}>Pedro Henrique Oliveira de Moura</h1>
+          <h1 className={T.aboutMe.Tittle}>{language === 'Port' ? "Clique para interagir com os textos" : "Click to interact with the texts"}</h1>
           <div className={T.aboutMe.Experiences}>
 
             <div className={T.aboutMe.Adm}>
@@ -221,14 +222,14 @@ export default function AboutMe() {
       <div className={T.aboutMe.App}>
         <Header />
         <div className={T.aboutMe.Body}>
-          <h1 className={T.aboutMe.Tittle}>Pedro Henrique Oliveira de Moura</h1>
+          <h1 className={T.aboutMe.Tittle}>Click to interact with the texts</h1>
           <div className={T.aboutMe.Experiences}>
 
             <div className={T.aboutMe.Adm}>
               <button
                 type='button'
                 onClick={onClickAdm}
-              >Business Administration</button>
+              >Administration</button>
               {
                 admBool
                 && <div className={T.aboutMe.PhraseAdm}>
