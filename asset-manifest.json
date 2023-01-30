@@ -1,11 +1,13 @@
 {
   "files": {
-    "main.css": "/static/css/main.86eca711.css",
-    "main.js": "/static/js/main.02c99c35.js",
+    "main.css": "/static/css/main.214d4467.css",
+    "main.js": "/static/js/main.04a2a633.js",
     "static/js/787.68dbee1e.chunk.js": "/static/js/787.68dbee1e.chunk.js",
     "static/media/madeira-3.jpg": "/static/media/madeira-3.daf26aa967f39613e27d.jpg",
     "static/media/wallpaper-1.jpg": "/static/media/wallpaper-1.29a17f8844c617631fbb.jpg",
+    "static/media/brasil.png": "/static/media/brasil.2afa2fc1c1d0c1c299f7.png",
     "static/media/perfil-1.jpeg": "/static/media/perfil-1.fe467cd7bbc4c3db65fb.jpeg",
+    "static/media/eua.png": "/static/media/eua.253f1f76b84e6b528a5d.png",
     "static/media/stardew-2.jpeg": "/static/media/stardew-2.b593012fe5a0c160b938.jpeg",
     "static/media/arceus-1.jpeg": "/static/media/arceus-1.f54d827baf5bb2054d0c.jpeg",
     "static/media/arceus-2.jpeg": "/static/media/arceus-2.bc9283b9a771a86502eb.jpeg",
@@ -38,12 +40,12 @@
     "static/media/db.jpg": "/static/media/db.84f92ead6a070fe15a39.jpg",
     "static/media/github-mark-white.svg": "/static/media/github-mark-white.97ed8e7eef60d61ca469881dd6f34511.svg",
     "index.html": "/index.html",
-    "main.86eca711.css.map": "/static/css/main.86eca711.css.map",
-    "main.02c99c35.js.map": "/static/js/main.02c99c35.js.map",
+    "main.214d4467.css.map": "/static/css/main.214d4467.css.map",
+    "main.04a2a633.js.map": "/static/js/main.04a2a633.js.map",
     "787.68dbee1e.chunk.js.map": "/static/js/787.68dbee1e.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.86eca711.css",
-    "static/js/main.02c99c35.js"
+    "static/css/main.214d4467.css",
+    "static/js/main.04a2a633.js"
   ]
 }
