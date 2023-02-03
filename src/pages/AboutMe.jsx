@@ -6,13 +6,9 @@ import Header from '../component/Header';
 import images from '../images'
 import T from '../style/tailwind'
 import PortContext from '../context/PortContext';
-import setaDir from '../images/icons/seta-direita1.png'
-// import getMusics from '../support/musicsAPI';
 
-// <Card imgArray={photos} string='Fotos pessoais:' />
 
 export default function AboutMe() {
-  // const dataApiMusics = async (param) => {await getMusics(param)};
   const { photos } = images;
   const { language } = useContext(PortContext);
   const [admBool, setAdmBool] = useState(false)
@@ -166,7 +162,6 @@ export default function AboutMe() {
                 && <div className={T.aboutMe.PhraseAdm}>
                   <button
                     onClick={nextPhraseAdm}
-                    value={setaDir}
                   >{administration[admCount]}</button>
                 </div>
               }
@@ -235,7 +230,6 @@ export default function AboutMe() {
                 && <div className={T.aboutMe.PhraseAdm}>
                   <button
                     onClick={nextPhraseAdm}
-                    value={setaDir}
                   >{administrationEng[admCount]}</button>
                 </div>
               }
