@@ -5,7 +5,7 @@ import '../index.css'
 import Card from '../component/Card';
 import images from '../images'
 import T from '../style/tailwind'
-import curriculo from './../images/resume/pedroHenriqueOliveiraDeMoura-jan23.pdf'
+import curriculo from './../images/resume/pedroHenriqueOliveiraDeMoura.pdf'
 import gitIcon from './../images/icons/github-mark-white.svg'
 import Header from '../component/Header';
 import Footer from '../component/Footer';

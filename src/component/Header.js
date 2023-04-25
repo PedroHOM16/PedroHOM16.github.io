@@ -9,7 +9,7 @@ import brasil from "../images/icons/brasil.png";
 import linkedin from "../images/icons/linkedin.png";
 import github from "../images/icons/github.png";
 import resume from "../images/icons/resume.png";
-import curriculo from './../images/resume/pedroHenriqueOliveiraDeMoura-jan23.pdf'
+import curriculo from './../images/resume/pedroHenriqueOliveiraDeMoura.pdf'
 
 
 export default function Header() {
