@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/static/css/main.2159e1a2.css",
-    "main.js": "/static/js/main.8f6dcf88.js",
+    "main.js": "/static/js/main.f5346707.js",
     "static/js/787.68dbee1e.chunk.js": "/static/js/787.68dbee1e.chunk.js",
     "static/media/madeira-3.jpg": "/static/media/madeira-3.daf26aa967f39613e27d.jpg",
     "static/media/wallpaper-1.jpg": "/static/media/wallpaper-1.29a17f8844c617631fbb.jpg",
@@ -37,18 +37,18 @@
     "static/media/amigurumi-1.jpg": "/static/media/amigurumi-1.c9783bc2bfd9856b1785.jpg",
     "static/media/back.jpg": "/static/media/back.be41264c33e7ce57d6fb.jpg",
     "static/media/front.jpg": "/static/media/front.5cd387895bd1d3aee471.jpg",
-    "static/media/pedroHenriqueOliveiraDeMoura.pdf": "/static/media/pedroHenriqueOliveiraDeMoura.0fca8e1c56df1844be35.pdf",
+    "static/media/pedroHenriqueOliveiraDeMoura.pdf": "/static/media/pedroHenriqueOliveiraDeMoura.536469708999f2a60027.pdf",
     "static/media/db.jpg": "/static/media/db.84f92ead6a070fe15a39.jpg",
     "static/media/resume.png": "/static/media/resume.41fc21f177f39586bfeb.png",
     "static/media/linkedin.png": "/static/media/linkedin.367e73f523d32c24d9df.png",
     "static/media/github-mark-white.svg": "/static/media/github-mark-white.97ed8e7eef60d61ca469881dd6f34511.svg",
     "index.html": "/index.html",
     "main.2159e1a2.css.map": "/static/css/main.2159e1a2.css.map",
-    "main.8f6dcf88.js.map": "/static/js/main.8f6dcf88.js.map",
+    "main.f5346707.js.map": "/static/js/main.f5346707.js.map",
     "787.68dbee1e.chunk.js.map": "/static/js/787.68dbee1e.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.2159e1a2.css",
-    "static/js/main.8f6dcf88.js"
+    "static/js/main.f5346707.js"
   ]
 }
